@@ -1,0 +1,392 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #710a0a;
+    overflow-y: scroll; /* Enable vertical scrolling */
+}
+
+header {
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    color: #710a0a;
+    padding: 0.5em 1em; /* Adjusted padding */
+    text-align: center;
+    position: relative;
+    width: 100%; /* Reduced width */
+    margin: 0 auto; /* Center the header */
+    display: flex;
+    flex-direction: column; /* Changed to column to stack header content and nav */
+    align-items: center; /* Center align items */
+    justify-content: center; /* Center align the content */
+    height: auto; /* Adjusted height to fit content */
+}
+
+header .header-content {
+    display: flex;
+    flex-direction: row; /* Changed to row to align logo and text horizontally */
+    align-items: center;
+    justify-content: center; /* Center align the content */
+    width: 100%;
+    text-align: center;
+    background-color: #ffffff; /* Set text background to black */
+}
+
+header .header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align text and nav */
+    margin-left: 10px; /* Added margin to create space between logo and text */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em; /* Adjusted font size */
+    margin-bottom: 2px; /* Added small gap */
+}
+
+header h2 {
+    margin: 5px 0 0 0; /* Reduced margin for spacing */
+    font-size: 1.5em; /* Adjusted font size */
+    margin-bottom: 5px; /* Reduced margin to create space for menu */
+}
+
+header img.logo {
+    width: 150px; /* Adjusted size */
+    height: 150px; /* Adjusted size */
+    margin-bottom: 0; /* Removed bottom margin */
+    background-color: white; /* Set background to white */
+    padding: 10px; /* Added padding */
+    /* Removed border-radius to remove circular shape */
+}
+
+nav {
+    width: 100%;
+    text-align: center;
+    margin-top: 5px; /* Reduced margin to place nav closer to header text */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex; /* Always show the menu items */
+    justify-content: center;
+    gap: 10px; /* Reduced gap between navigation links */
+}
+
+nav ul li {
+    display: inline-block; /* Change to inline-block for horizontal layout */
+    margin: 0 5px; /* Reduced margin */
+}
+
+nav ul li a {
+    color: #710a0a;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.menu-icon {
+    display: none; /* Hide the menu icon */
+}
+
+.show-menu {
+    display: flex; /* Always show the menu items */
+}
+
+main {
+    padding: 20px;
+    max-width: 1000px; /* Adjusted max-width */
+    margin: 0 auto;
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+.hero {
+    width: 100%; /* Increased width to 100% */
+    background-image: url("C:\Users\aryam\OneDrive\Desktop\.vscode\webapp\logo.png.png");
+    background-size: auto;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 80px 20px; /* Adjusted padding */
+}
+
+.hero h1 {
+    font-size: 2.5em; /* Adjusted font size */
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.2em; /* Adjusted font size */
+}
+
+.highlight {
+    color: rgb(255, 255, 255); /* Change this color as needed */
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Adjusted gap */
+    justify-content: center;
+}
+
+.product-list .product {
+    background-color: white;
+    border: 1px solid #ffffff;
+    padding: 5px; /* Adjusted padding */
+    width: calc(33.333% - 10px); /* Adjusted width */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 2px 0; /* Adjusted padding */
+    width: 100%;
+}
+
+#commitments, #steps, #stories {
+    margin: 50px 0; /* Increased margin */
+    color: white; /* Changed color to white */
+}
+
+#steps {
+    background-color: transparent; /* Removed background color */
+}
+
+#steps ol {
+    list-style-type: none;
+    margin: 20px 0; /* Adjusted margin */
+    padding-left: 20px; /* Adjusted padding */
+    font-size: 1.2em; /* Increased font size */
+}
+
+/* Animation for commitments section */
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+.commitments {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.commitments .card {
+    width: calc(33.333% - 20px);
+}
+
+/* Styles for card flip */
+.card-container {
+    perspective: 1000px;
+}
+
+.card {
+    width: 100%;
+    height: 300px;
+    margin: 10px;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.card .front, .card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border: 1px solid #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card .front {
+    background-color: white;
+}
+
+.card .back {
+    background-color: #f4f4f4;
+    transform: rotateY(180deg);
+}
+
+/* New styles for commitments section */
+.commitments-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    color: white; /* Changed color to white */
+}
+
+.commitments-heading .line-span {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.commitments-heading .line-div-max-length {
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+}
+
+commitments-heading span {
+    font-size: 2em; /* Increased font size to match "5 Steps to Place Order" */
+    font-weight: bold;
+}
+
+.commitments-heading .span-with-green {
+    color: #ffffff;
+}
+
+.steps-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.steps-heading .line-span {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.steps-heading .line-div-max-length {
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+}
+
+.steps-heading span {
+    font-size: 2em; /* Increased font size */
+    font-weight: bold;
+}
+
+.steps-heading .span-with-green {
+    color: #ffffff;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 40px; /* Added margin for spacing */
+    margin-bottom: 20px; /* Added margin for spacing */
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 30%; /* Adjusted width for 3, 2 order */
+    margin-bottom: 20px; /* Added margin for spacing */
+}
+
+.step img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.homePage-flip-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.homePage-flip-card {
+    width: calc(33.333% - 20px); /* Adjusted width for 3 cards in a row */
+    perspective: 1000px;
+}
+
+.homePage-flip-card-inner {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.homePage-flip-card:hover .homePage-flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.homePage-flip-card-front, .homePage-flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.homePage-flip-card-front {
+    background-color:#710a0a ;
+}
+
+.homePage-flip-card-back {
+    background-color: #ffffff;
+    color: black;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+    justify-content: center;
+    max-width: 250px;
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+    padding: 2%;
+    max-height: 325px;
+    margin-top: 25px;
+}
+
+.flip-card-back-icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.inner-text-heading, .inner-text-heading-two {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.inner-text-content-three {
+    font-size: 1em;
+    text-align: center;
+}
+
+/* Ensure image fits within the card */
+.homePage-flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
