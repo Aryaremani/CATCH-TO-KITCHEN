@@ -5,6 +5,7 @@ body {
     background-color: white; /* Changed background color to white */
     color: #710a0a; /* Changed text color to #710a0a */
     overflow-y: scroll; /* Enable vertical scrolling */
+    text-align: center; /* Center align text */
 }
 
 header {
@@ -103,6 +104,7 @@ main {
     padding: 20px;
     max-width: 1000px; /* Adjusted max-width */
     margin: 0 auto;
+    text-align: center; /* Center align text */
 }
 
 .section {
