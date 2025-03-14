@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catch to Kitchen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="C:\Users\aryam\OneDrive\Desktop\.vscode\webapp\maslogo.png" class="logo logo-animation" alt="Logo">
+            <div class="header-text">
+                <h1>CATCH TO KITCHEN</h1>
+                <h2>Welcome to Fresh Grocery Store</h2>
+                <nav>
+                    <ul class="show-menu"> <!-- Always show the menu items -->
+                        <li><a onclick="showSection('home')">Home</a></li>
+                        <li><a onclick="showSection('products')">Products</a></li>
+                        <li><a onclick="showSection('about')">About Us</a></li>
+                        <li><a onclick="showSection('contact')">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="section active" id="home">
+            <div class="hero">
+                <h1 class="highlight">Fresh and Hygienic Groceries Delivered to Your Doorstep</h1>
+                <p class="highlight">We offer a wide range of fresh fish, meat, vegetables, and other groceries with top hygiene and care.</p>
+            </div>
+            <div class="commitments-heading">
+                <span class="line-span"><div class="line-div-max-length"></div></span>
+                &nbsp;<span>Our</span><span class="span-with-green"> &nbsp;Commitments</span>&nbsp;
+                <span class="line-span"><div class="line-div-max-length"></div></span>
+            </div>
+            <div class="row homePage-flip-card-container">
+                <div class="col-lg-4 homePage-flip-card">
+                    <div class="homePage-flip-card-inner">
+                        <div class="homePage-flip-card-front">
+                            <img src="C:\Users\aryam\OneDrive\Desktop\.vscode\webapp\commitment1.png" alt="Commitment 1">
+                        </div>
+                        <div class="homePage-flip-card-back ps-2">
+                            <div class="flip-card-back-icon-container">
+                                <img src="images/commitment1-icon.jpg" alt="Commitment 1 Icon">
+                            </div>
+                            <div class="inner-text-heading">
+                                <span>100% Chemical Free</span>
+                            </div>
+                            <div class="inner-text-content-three">
+                                With our rigorous quality checks and trusted partners, every bite is pure, natural, and free from harmful chemicals. Enjoy the freshest and safest seafood, guaranteed.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 homePage-flip-card">
+                    <div class="homePage-flip-card-inner">
+                        <div class="homePage-flip-card-front">
+                            <img src="C:\Users\aryam\OneDrive\Desktop\.vscode\webapp\commitment2.png" alt="Commitment 2">
+                        </div>
+                        <div class="homePage-flip-card-back ps-2">
+                            <div class="flip-card-back-icon-container">
+                                <img src="images/commitment2-icon.jpg" alt="Commitment 2 Icon">
+                            </div>
+                            <div class="inner-text-heading pt-2">
+                                <span>Daily Catch</span>
+                            </div>
+                            <div class="inner-text-content-three">
+                                Our dedicated fishermen bring the catch straight from the sea, preserving peak freshness and rich nutrition. We don’t just promise freshness — we live by it.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 homePage-flip-card">
+                    <div class="homePage-flip-card-inner">
+                        <div class="homePage-flip-card-front">
+                            <img src="C:\Users\aryam\OneDrive\Desktop\.vscode\webapp\commitment3.jpg" alt="Commitment 3">
+                        </div>
+                        <div class="homePage-flip-card-back ps-2">
+                            <div class="flip-card-back-icon-container">
+                                <img src="images/commitment3-icon.jpg" alt="Commitment 3 Icon">
+                            </div>
+                            <div class="inner-text-heading pt-2">
+                                <span>Not Frozen</span>
+                            </div>
+                            <div class="inner-text-content-three">
+                                While others freeze, we preserve. Our strict cold value chain keeps seafood fresh from catch to delivery — ensuring unmatched quality, flavor, and freshness.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 homePage-flip-card">
+                    <div class="homePage-flip-card-inner">
+                        <div class="homePage-flip-card-front">
+                            <img src="C:\Users\aryam\OneDrive\Desktop\.vscode\webapp\commitment4.png" alt="Commitment 4">
+                        </div>
+                        <div class="homePage-flip-card-back ps-2">
+                            <div class="flip-card-back-icon-container">
+                                <img src="images/commitment4-icon.jpg" alt="Commitment 4 Icon">
+                            </div>
+                            <div class="inner-text-heading">
+                                <span>Same day delivery</span>
+                            </div>
+                            <div class="inner-text-content-three">
+                                Hungry for fresh seafood? Get same-day delivery! Place your order by 6 PM, and we’ll bring peak flavor to your doorstep by dinner. Convenience guaranteed.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 homePage-flip-card">
+                    <div class="homePage-flip-card-inner">
+                        <div class="homePage-flip-card-front">
+                            <img src="C:\Users\aryam\OneDrive\Desktop\.vscode\webapp\commitment5..png" alt="Commitment 5">
+                        </div>
+                        <div class="homePage-flip-card-back ps-2">
+                            <div class="flip-card-back-icon-container">
+                                <img src="images/commitment5-icon.jpg" alt="Commitment 5 Icon">
+                            </div>
+                            <div class="inner-text-heading-two pt-2">
+                                <span>Ready to cook</span>
+                            </div>
+                            <div class="inner-text-content-three">
+                                We promise transparency and true value. No hidden fees — you pay only for the net weight of what you can eat. Enjoy premium, ready-to-cook seafood with no surprises.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="whatsapp-icon-container">
+                <a href="https://wa.me/919633343422?text=Hello%20Catch%20to%20Kitchen" target="_blank">
+                    <img src="C:\Users\aryam\OneDrive\Desktop\.vscode\webapp\whatsapp-logo_4406163.png" alt="WhatsApp Icon">
+                </a>
+            </div>
+            <div class="join-us-container">
+                <a href="https://chat.whatsapp.com/LkbRfDJWV4oEDnkwBdUGS5" target="_blank">
+                    <img src="C:\Users\aryam\OneDrive\Desktop\.vscode\webapp\join.png" alt="Join Us Logo">
+                </a>
+            </div>
+            <section id="steps">
+                <div class="steps-heading">
+                    <span class="line-span"><div class="line-div-max-length"></div></span>
+                    &nbsp;<span>5 Steps to</span><span class="span-with-green"> &nbsp;Place Order</span>&nbsp;
+                    <span class="line-span"><div class="line-div-max-length"></div></span>
+                </div>
+                <div class="steps-container">
+                    <div class="step">
+                        <img src="images/step1-icon.png" alt="Step 1">
+                        <p>Browse our wide range of fresh fish, meat, and groceries in our WhatsApp community</p>
+                    </div>
+                    <div class="step">
+                        <img src="images/step2-icon.png" alt="Step 2">
+                        <p>Select your desired items and place your order by messaging us on WhatsApp.
+                        </p>
+                    </div>
+                    <div class="step">
+                        <img src="images/step3-icon.png" alt="Step 3">
+                        <p>Share your delivery details and confirm your order with our team.
+                        </p>
+                    </div>
+                </div>
+                <div class="steps-container">
+                    <div class="step">
+                        <img src="images/step4-icon.png" alt="Step 4">
+                        <p> Sit back and relax! We’ll deliver fresh groceries right to your doorstep</p>
+                    </div>
+                    <div class="step">
+                        <img src="images/step5-icon.png" alt="Step 5">
+                        <p>Receive your order at your doorstep and enjoy fresh groceries.</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section class="section" id="products">
+            <h2>Our Products</h2>
+            <div class="product-list">
+                <!-- Products will be dynamically loaded here -->
+            </div>
+        </section>
+        <section class="section" id="about">
+            <div class="hero">
+                <h2>About Us</h2>
+                <p>Catch to Kitchen is dedicated to providing the freshest and most hygienic groceries directly to your doorstep. Our mission is to ensure that you have access to high-quality products that are both healthy and delicious.</p>
+            </div>
+        </section>
+        <section class="section" id="contact">
+            <h2>Contact Us</h2>
+            <p>For inquiries, please email us at catchtokitchen2020@gmail.com or call us at +91 96333 43411, +91 96333 43422.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Catch to Kitchen. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
