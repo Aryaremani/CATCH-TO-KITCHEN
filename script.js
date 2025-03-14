@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
     const products = [
-        { name: 'Fresh Fish', price: '$10', description: 'High-quality fresh fish.' },
-        { name: 'Organic Meat', price: '$15', description: 'Organic and hygienic meat.' },
-        { name: 'Fresh Vegetables', price: '$5', description: 'Fresh and healthy vegetables.' },
-        { name: 'Dairy Products', price: '$8', description: 'Fresh and organic dairy products.' },
-        { name: 'Cashews', price: '', description: 'Freshly baked bread and pastries.' },
-        { name: 'Fruits', price: '$7', description: 'Seasonal and exotic fruits.' }
+        { name: 'Fresh Fish', price: '$10', description: 'High-quality fresh fish.', image: 'images/fish.png' },
+        { name: 'Organic Meat', price: '$15', description: 'Organic and hygienic meat.', image: 'images/meat.png' },
+        { name: 'Fresh Vegetables', price: '$5', description: 'Fresh and healthy vegetables.', image: 'images/vegetables.png' },
+        { name: 'Dairy Products', price: '$8', description: 'Fresh and organic dairy products.', image: 'images/dairy.png' },
+        { name: 'Cashews', price: '', description: 'Freshly baked bread and pastries.', image: 'images/cashews.png' },
+        { name: 'Fruits', price: '$7', description: 'Seasonal and exotic fruits.', image: 'images/fruits.png' }
         // Add more products as needed
     ];
 
@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
         productDiv.classList.add('product');
         productDiv.innerHTML = `
             <h3>${product.name}</h3>
+            <img src="${product.image}" alt="${product.name}">
             <p>${product.price}</p>
             <p>${product.description}</p>
         `;
@@ -23,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Add logo animation
-    const logo = document.querySelector('.logo');
+    const logo = document.querySelector('.logo img');
     logo.classList.add('logo-animation');
 
     // Add share button
