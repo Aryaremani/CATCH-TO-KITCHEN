@@ -2,14 +2,14 @@ body {
     font-family: 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
-    background-color: white; /* Changed background color to white */
+    background-color: #ecebeb; /* Changed background color to white */
     color: #710a0a; /* Changed text color to #710a0a */
     overflow-y: scroll; /* Enable vertical scrolling */
     text-align: center; /* Center align text */
+    /* Removed background image */
 }
 
 header {
-    border: 1px solid #710a0a; /* Changed border color to #710a0a */
     background-color: #ffffff;
     color: #710a0a;
     padding: 0.5em 1em; /* Adjusted padding */
@@ -54,8 +54,8 @@ header h2 {
 }
 
 header img.logo {
-    width: 150px; /* Adjusted size */
-    height: 150px; /* Adjusted size */
+    width: 170px; /* Adjusted size */
+    height: 144px; /* Adjusted size */
     margin-bottom: 0; /* Removed bottom margin */
     background-color: white; /* Set background to white */
     padding: 10px; /* Added padding */
@@ -90,6 +90,7 @@ nav ul li a {
     color: #710a0a;
     text-decoration: none;
     cursor: pointer;
+    font-size: 1.2em; /* Increased font size */
 }
 
 .menu-icon {
@@ -117,12 +118,11 @@ main {
 
 .hero {
     width: 100%; /* Increased width to 100% */
-    background-image: url("C:\Users\aryam\OneDrive\Desktop\.vscode\webapp\logo.png.png");
     background-size: auto;
     background-position: center;
     color: #710a0a; /* Changed text color to #710a0a */
     text-align: center;
-    padding: 80px 20px; /* Adjusted padding */
+    padding: 40px 20px; /* Reduced padding */
 }
 
 .hero h1 {
@@ -167,6 +167,22 @@ footer {
 
 #steps {
     background-color: transparent; /* Removed background color */
+    position: relative; /* Ensure the section is positioned relative */
+}
+
+#steps::before {
+    content: "";
+    background-image: url("C:/Users/aryam/OneDrive/Desktop/.vscode/webapp/maslogo.png");
+    background-repeat: no-repeat;
+    background-position: center 40%; /* Adjusted background position */
+    background-size: contain; /* Adjusted background size */
+    opacity: 0.1; /* Set low opacity for the background image */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure the background image is behind the text */
 }
 
 #steps ol {
@@ -256,11 +272,11 @@ footer {
 }
 
 commitments-heading span {
-    font-size: 2em; /* Increased font size to match "5 Steps to Place Order" */
+    font-size: 2em; /* Increased font size to 2em */
     font-weight: bold;
 }
 
-.commitments-heading .span-with-green {
+commitments-heading .span-with-green {
     color: #710a0a; /* Changed text color to #710a0a */
 }
 
@@ -327,11 +343,12 @@ commitments-heading span {
 .homePage-flip-card {
     width: calc(33.333% - 20px); /* Adjusted width for 3 cards in a row */
     perspective: 1000px;
+    height: 300px; /* Ensure the flip card height matches the image height */
 }
 
 .homePage-flip-card-inner {
     width: 100%;
-    height: 300px;
+    height: 100%; /* Ensure the inner card height matches the flip card height */
     position: relative;
     transform-style: preserve-3d;
     transition: transform 0.6s;
@@ -354,29 +371,27 @@ commitments-heading span {
 }
 
 .homePage-flip-card-front {
-    background-color:#710a0a ;
+    background-color: #ffffff; /* Set background color for the front side */
+}
+
+.homePage-flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image fits fully into the card */
 }
 
 .homePage-flip-card-back {
-    background-color: #ffffff;
-    color: #710a0a; /* Changed text color to #710a0a */
+    background-color: #f4f4f4; /* Set background color for the back side */
     transform: rotateY(180deg);
-    display: flex;
-    flex-direction: column;
-    align-items: normal;
-    justify-content: center;
-    max-width: 250px;
-    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
-    padding: 2%;
-    max-height: 325px;
-    margin-top: 25px;
-}
-
-.flip-card-back-icon-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.flip-card-back-icon-container {
     margin-bottom: 10px;
 }
 
@@ -392,21 +407,70 @@ commitments-heading span {
     text-align: center;
 }
 
-/* Ensure image fits within the card */
-.homePage-flip-card-front img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 #about {
     color: #710a0a; /* Changed text color to #710a0a */
     padding: 20px; /* Add padding for better spacing */
     border-radius: 5px; /* Optional: Add border-radius for rounded corners */
     text-align: center; /* Center align text */
+    position: relative; /* Ensure the section is positioned relative */
+}
+
+#about::before {
+    content: "";
+    background-image: url("C:/Users/aryam/OneDrive/Desktop/.vscode/webapp/maslogo.png");
+    background-repeat: no-repeat;
+    background-position: center 20%; /* Adjusted background position */
+    background-size: contain; /* Adjusted background size */
+    opacity: 0.1; /* Set low opacity for the background image */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure the background image is behind the text */
 }
 
 #about .hero {
     color: #710a0a; /* Changed text color to #710a0a */
     text-align: center; /* Center align text */
+    position: relative; /* Ensure the hero section is positioned relative */
+}
+
+#contact {
+    color: #710a0a; /* Changed text color to #710a0a */
+    padding: 20px; /* Add padding for better spacing */
+    border-radius: 5px; /* Optional: Add border-radius for rounded corners */
+    text-align: center; /* Center align text */
+    position: relative; /* Ensure the section is positioned relative */
+}
+
+#contact::before {
+    content: "";
+    background-image: url("C:/Users/aryam/OneDrive/Desktop/.vscode/webapp/maslogo.png");
+    background-repeat: no-repeat;
+    background-position: center 20%; /* Adjusted background position */
+    background-size: contain; /* Adjusted background size */
+    opacity: 0.1; /* Set low opacity for the background image */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure the background image is behind the text */
+}
+
+.whatsapp-icon-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.whatsapp-icon-container img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    cursor: pointer;
 }
